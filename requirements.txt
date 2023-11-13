@@ -6,6 +6,7 @@ ca-certificates=2023.08.22=haa95532_0
 click=8.1.7=py311haa95532_0
 colorama=0.4.6=py311haa95532_0
 flask=2.2.2=py311haa95532_0
+gunicorn=21.2.0=pypi_0
 intel-openmp=2023.2.0=h57928b3_50497
 itsdangerous=2.0.1=pyhd3eb1b0_0
 jinja2=3.1.2=py311haa95532_0
@@ -21,6 +22,7 @@ markupsafe=2.1.1=py311h2bbff1b_0
 mkl=2023.2.0=h6a75c08_50496
 numpy=1.26.0=py311h0b4df5a_0
 openssl=3.1.4=hcfcfb64_0
+packaging=23.2=pypi_0
 pip=23.3=py311haa95532_0
 pthreads-win32=2.9.1=hfa6e2cd_3
 python=3.11.5=he1021f5_0
