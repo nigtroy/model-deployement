@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import pickle 
 import sklearn
 
@@ -20,6 +20,15 @@ def predict():
     predictions = model.predict(tokenized_email)
     predictions = 1 if predictions == 1 else -1
     return render_template('index.html', predictions=predictions, email_text=email_text)
+
+@app.route("/api/predict", methods=["POST"])
+def api_predict():
+    data = request.get_json(force=True)
+    email_text = data['content']
+    tokenized_email = tokenizer.transform([email_text])
+    predictions = model.predict(tokenized_email)
+    predictions = 1 if predictions == 1 else -1
+    return jsonify({predictions: predictions})
 
 
 if __name__ == "__main__":
